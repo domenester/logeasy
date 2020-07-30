@@ -1,0 +1,8 @@
+apps:
+  - script: "./logeasy-backend/dist/index.js"
+    name: "logeasy-backend"
+  - script: "serve"
+    name: "logeasy-frontend"
+    env:
+      PM2_SERVE_PATH: './logeasy-frontend/build'
+      PM2_SERVE_PORT: 3665

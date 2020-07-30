@@ -1,0 +1,15 @@
+{
+  "name": "logeasy",
+  "version": "1.0.0",
+  "description": "Run logeasy dependencies in docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker run -it -d -p 3665:3665 -p 3666:3666 --name logeasy logeasy",
+    "build": "docker build -t logeasy .",
+    "build:no-cache": "docker build -t logeasy . --no-cache",
+    "reload": "npm run build:no-cache && npm start"
+  },
+  "author": "",
+  "license": "ISC"
+}
